@@ -12,7 +12,7 @@ public class Test {
 			}
 		}
 
-		return gcf;
+		
 	}
 
 	public static boolean isCommonFactor(int num1, int num2, int factor) {
