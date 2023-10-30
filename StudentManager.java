@@ -42,11 +42,22 @@ public class StudentManager {
     }
 
     public void seeTardies(){
+Scanner sc = new Scanner(System.in);
+	    System.out.println("enter 0 to go back");
+	    System.out.println("true means they were here false means they were not");
+		System.out.println(students.get(index).getAttendence().toString());
+	    sc.nextInt();
 
+	    homePage();
     }
 
     public void seeClasses(){
+	Scanner sc = new Scanner(System.in);
+	    System.out.println("enter 0 to go back");
+		System.out.println(students.get(index).getClasses().toString());
+	    sc.nextInt();
 
+	    homePage();
     }
     public void markStudentAbsentOrPresent(){
 
