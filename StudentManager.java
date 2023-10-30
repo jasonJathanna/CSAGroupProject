@@ -155,14 +155,14 @@ Scanner sc = new Scanner(System.in);
     public void refresh(){
 
 	     for(Student student : students){
-		if(student.getBeenMarked() == false){
+		if(student.isBeenMarked() == false){
 			student.markHere();
 		}
 	    }
 	    
 	    
 	    for(Student student : students){
-		student.setBeenMarked(false);
+		student.setHasBeenMarked(false);
 	    }
 	    
     }
