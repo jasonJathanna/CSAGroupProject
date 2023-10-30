@@ -140,12 +140,16 @@ Scanner sc = new Scanner(System.in);
             if (changeGradeInput = 2) {
                 homePage();
             }
-            if (changeGradeInput = 1) {
+            
+	    if (changeGradeInput = 1) {
                 System.out.println("What would you like the students grade to be");
                 int newGrade = reader.nextInt();
                     students.get(index).setGrade(newGrade);
             else {
-                System.out.println("This is not a valid entry. Enter 1 change a students grade or 2 to go back.")
+                System.out.println("This is not a valid entry")
+		changeStudentGrade();
+			}
+	    
     }
 
     public void refresh(){
