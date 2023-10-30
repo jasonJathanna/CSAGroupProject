@@ -1,11 +1,13 @@
 
 public class StudentManager {
-
+    int index;
     public void generateStudents(){
 
     }
 
     public void homePage(){
+        System.out.println("Enter the students ID number")
+        index = reader.nextInt();
         System.out.println("Enter \n 1. to exit \n 2. to see grades \n 3. to see tardies \n 4 to see classes \n 5. to take attendance \n 6. to change grades \n 7. for the next day")
             int input = reader.nextInt();
             switch (input) {
@@ -48,7 +50,17 @@ public class StudentManager {
 
     }
     public void changeStudentGrade(){
-
+        System.out.println("Enter 1 change a students grade or 2 to go back")
+            int changeGradeInput = reader.nextInt();
+            if (changeGradeInput = 2) {
+                homePage();
+            }
+            if (changeGradeInput = 2) {
+                System.out.println("Which student would you like to change?");
+                int 
+                System.out.println("What would you like the students grade to be");
+                
+            
     }
 
     public void refresh(){
