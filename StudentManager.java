@@ -33,27 +33,36 @@ public class StudentManager {
  
     }
 
-    public void homePage(){
-        System.out.println("Enter the students ID number")
+	public void setIndex(){
+
+	System.out.println("Enter the students ID number")
         index = reader.nextInt();
+	}
+    public void homePage(){
+        Scanner reader = new Scanner(System.in);
         System.out.println("Enter \n 1. to exit \n 2. to see grades \n 3. to see tardies \n 4 to see classes \n 5. to take attendance \n 6. to change grades \n 7. for the next day")
             int input = reader.nextInt();
             switch (input) {
                 case 1:
                     break;
                 case 2:
+		    setIndex()
                     seeGrades();
                     break;
                 case 3:
+		    setIndex()
                     seeTardies();
                     break;
                 case 4:
+		    setIndex()
                     seeClasses();
                     break;
                 case 5: 
+		    setIndex()
                     markStudentAbsentOrPresent();
                     break;
                 case 6:
+		    setIndex()
                     changeStudentGrade();
                     break;
                 case 7:
@@ -61,7 +70,7 @@ public class StudentManager {
                     break;
                 default:
                     System.out.println("This is not a valid entry.")
-			    homePage();
+		    homePage();
     }
 
     public void seeGrades(){
