@@ -13,11 +13,22 @@ private ArrayList<String> students = new ArrayList<>();
     
 
     public void markAbsent(){
+        if(hasBeenMarked){
+           System.out.println("attendece for this students was already compleated"); 
+        } else{
         attendence.add(false);
+        hasBeenMarked = true;
+        }
     }
 
     public void markPresent(){
+       if(hasBeenMarked){
+           System.out.println("attendece for this students was already compleated"); 
+        } else{
         attendence.add(true);
+        hasBeenMarked = true;
+        }
+        
     }
 
 
