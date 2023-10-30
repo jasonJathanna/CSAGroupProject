@@ -12,8 +12,8 @@ public class StudentManager {
     public void seeGrades(){
 Scanner reader = new Scanner(System.in);
 		int x, back;
-		String[] students = {"dude", "other dude", "random russian", "unknown", "classified"};
-		int[] grades = {7, 69, 420, 49, 87};
+		String[] students = {"dude", "other dude", "random russian", "unknown", "classified"};//random list of names until we have some
+		int[] grades = {7, 69, 420, 49, 87};//random list of grade until we have input
 	for (x=0; x<=(students.length-1); x++) {
 			
 			System.out.print(students[x]);
