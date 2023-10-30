@@ -5,7 +5,8 @@ public class Student {
 
     private boolean hasBeenMarked;
     private ArrayList<Boolean> attendence = new ArrayList<>();
-
+private ArrayList<String> students = new ArrayList<>();
+    private ArrayList<int> grades = new ArrayList<>();
     private ArrayList<String> classes = new ArrayList<>();
     private int id;
     private int grade;
