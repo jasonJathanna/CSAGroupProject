@@ -34,7 +34,7 @@ public class StudentManager {
     }
 
 	public void setIndex(){
-
+	   Scanner reader = new Scanner(System.in);
 	System.out.println("Enter the students ID number")
         index = reader.nextInt();
 	}
@@ -77,9 +77,9 @@ public class StudentManager {
 	    
 Scanner reader = new Scanner(System.in);
 
-	    System.out.println();
+	    System.out.println("enter 0 to go back");
 	    System.out.println( students.get(index).getGrade() + "%" );
-	    reader.netInt();
+	    reader.nextInt();
 	    homePage();
 		
     }
