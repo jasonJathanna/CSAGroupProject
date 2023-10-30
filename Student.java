@@ -10,6 +10,7 @@ private ArrayList<String> students = new ArrayList<>();
     private ArrayList<String> classes = new ArrayList<>();
     private int id;
     private int grade;
+    
 
     public void markAbsent(){
         attendence.add(false);
