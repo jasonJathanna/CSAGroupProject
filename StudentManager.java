@@ -1,6 +1,6 @@
 
 public class StudentManager {
-import java.util.Scanner;
+
     public void generateStudents(){
 
     }
