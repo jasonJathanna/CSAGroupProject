@@ -9,7 +9,7 @@ public class Student {
     private ArrayList<String> classes = new ArrayList<>();
     private int id;
     private int grade;
-    private int opt;
+    private int attend;
 
     public void markAbsent(){
         attendence.add(false);
