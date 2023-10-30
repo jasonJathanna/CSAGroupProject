@@ -50,17 +50,17 @@ public class StudentManager {
 
     }
     public void changeStudentGrade(){
-        System.out.println("Enter 1 change a students grade or 2 to go back")
+        System.out.println("Enter 1 change a students grade or 2 to go back.")
             int changeGradeInput = reader.nextInt();
             if (changeGradeInput = 2) {
                 homePage();
             }
-            if (changeGradeInput = 2) {
-                System.out.println("Which student would you like to change?");
-                int 
+            if (changeGradeInput = 1) {
                 System.out.println("What would you like the students grade to be");
-                
-            
+                int newGrade = reader.nextInt();
+                    students.get(index).setGrade(newGrade);
+            else {
+                System.out.println("This is not a valid entry. Enter 1 change a students grade or 2 to go back.")
     }
 
     public void refresh(){
