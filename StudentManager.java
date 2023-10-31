@@ -7,14 +7,14 @@ public class StudentManager {
 
     public void generateStudents() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("do you want to add a student 0 for no 1 for yes");
+        System.out.println("Do you want to add a student? Enter...\n0)No\n1)Yes");
         int input = sc.nextInt();
 
         if (input == 1) {
             students.add(new Student());
-            System.out.println("enter in their id");
+            System.out.println("Enter student id");
             students.get(students.size() - 1).setId(sc.nextInt());
-            System.out.println("enter in the four classes they are taking");
+            System.out.println("Enter in class codes for their current four classes:");
 
             for (int i = 0; i < 4; i++) {
                 students.get(students.size() - 1).addClass(sc.nextInt());
@@ -27,7 +27,7 @@ public class StudentManager {
         } else if (input == 0) {
 
         } else {
-            System.out.println("error invalid input try again ");
+            System.out.println("Error! Invalid input, try again.");
             generateStudents();
 
         }
@@ -37,7 +37,7 @@ public class StudentManager {
 
     public void setIndex() {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter the students ID number");
+        System.out.println("Enter the student's ID number");
         int studentID = reader.nextInt();
         int i = 0;
         for (Student student: students) {
@@ -51,7 +51,7 @@ public class StudentManager {
 
     public void homePage() {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter \n 1. to exit \n 2. to see grades \n 3. to see tardies \n 4. to see classes \n 5. to take attendance \n 6. to change grades \n 7. for the next day");
+        System.out.println("Enter...\n 1.Exit \n 2.See grades \n 3.See tardies \n 4.See classes \n 5.Take attendance \n 6.Change grades \n 7. For the next day");
         int input = reader.nextInt();
         switch (input) {
             case 1:
@@ -80,7 +80,7 @@ public class StudentManager {
                 refresh();
                 break;
             default:
-                System.out.println("This is not a valid entry.");
+                System.out.println("Invalid input!");
                 homePage();
         }
     }
@@ -90,26 +90,26 @@ public class StudentManager {
         System.out.println("enter 0 to go back");
         System.out.println(students.get(index).getGrade() + "%");
         reader.nextInt();
+//Return to homepage
         homePage();
 
     }
 
     public void seeTardies() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter 0 to go back");
-        System.out.println("true means they were here false means they were not");
+        System.out.println("Enter 0 to go back");
         System.out.println(students.get(index).getAttendence().toString());
         sc.nextInt();
-
+//Return to homepage
         homePage();
     }
 
     public void seeClasses() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter 0 to go back");
+        System.out.println("Enter 0 to go back");
         System.out.println(students.get(index).getClasses().toString());
         sc.nextInt();
-
+//Return to homepage
         homePage();
     }
 
@@ -117,7 +117,7 @@ public class StudentManager {
 
         Scanner sc = new Scanner(System.in);
         //Ask to choose two options
-        System.out.println("Enter\n1)Absent\n2)Present\n3)Return to Homepage");
+        System.out.println("Enter...\n1)Absent\n2)Present\n3)Return to Homepage");
 
 //loop to repeat incase of wrong input
 
@@ -125,20 +125,21 @@ public class StudentManager {
         switch (sc.nextInt()) {
             case 1:
                 students.get(index).markAbsent();
+//Return to homepage
                 homePage();
-                //remember to return to homepage
                 break;
             case 2:
                 students.get(index).markPresent();
+//Return to homepage
                 homePage();
                 break;
-            //remember to return to homepage
             case 3:
+//Return to homepage
                 homePage();
-                //remember to return to homepage
                 break;
             default:
                 System.out.println("Invalid input! Choose another option:");
+//If input is invalid, recall method to wnter new inout
                 markStudentAbsentOrPresent();
 
 
@@ -147,19 +148,20 @@ public class StudentManager {
 
     public void changeStudentGrade() {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter 1 change a students grade or 2 to go back.");
+        System.out.println("Enter..\n1)Change a student's grade\n2)Go back");
         int changeGradeInput = reader.nextInt();
         if (changeGradeInput == 2) {
+//Return to homepage
             homePage();
         }
 
         if (changeGradeInput == 1) {
-            System.out.println("What would you like the students grade to be");
+            System.out.println("Enter student's grade:");
             int newGrade = reader.nextInt();
             students.get(index).setGrade(newGrade);
             homePage();
         } else {
-            System.out.println("This is not a valid entry");
+            System.out.println("Invalid entry!");
             changeStudentGrade();
         }
 
