@@ -5,9 +5,8 @@ public class Student {
 
     private boolean hasBeenMarked;
     private ArrayList<Boolean> attendence = new ArrayList<>();
-private ArrayList<String> students = new ArrayList<>();
-    private ArrayList<int> grades = new ArrayList<>();
-    private ArrayList<String> classes = new ArrayList<>();
+    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> classes = new ArrayList<>();
     private int id;
     private int grade;
     
@@ -31,6 +30,10 @@ private ArrayList<String> students = new ArrayList<>();
         
     }
 
+    public void addClass(int classID){
+        classes.add(classID);
+    }
+
 
 
 
@@ -51,11 +54,11 @@ private ArrayList<String> students = new ArrayList<>();
         this.attendence = attendence;
     }
 
-    public ArrayList<String> getClasses() {
+    public ArrayList<Integer> getClasses() {
         return classes;
     }
 
-    public void setClasses(ArrayList<String> classes) {
+    public void setClasses(ArrayList<Integer> classes) {
         this.classes = classes;
     }
 
