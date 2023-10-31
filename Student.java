@@ -13,7 +13,7 @@ public class Student {
 
     public void markAbsent(){
         if(hasBeenMarked){
-           System.out.println("attendece for this students was already compleated"); 
+           System.out.println("Attendece for this students was already compleated"); 
         } else{
         attendence.add(false);
         hasBeenMarked = true;
@@ -22,7 +22,7 @@ public class Student {
 
     public void markPresent(){
        if(hasBeenMarked){
-           System.out.println("attendece for this students was already compleated"); 
+           System.out.println("Attendece for this students was already compleated"); 
         } else{
         attendence.add(true);
         hasBeenMarked = true;
