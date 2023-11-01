@@ -29,7 +29,9 @@ public class StudentManager {
             generateStudents();
 
         } 
-        else if (input == 0) {}
+        else if (input == 0) {
+            homePage();
+        }
 // if input not valid recall method until valid
         else {
             System.out.println("Error! Invalid input, try again.");
@@ -59,7 +61,7 @@ public class StudentManager {
     public void homePage() {
         Scanner reader = new Scanner(System.in);
 //Enter number based on what to edit or view
-        System.out.println("Enter...\n 1.Exit \n 2.See grades \n 3.See tardies \n 4.See classes \n 5.Take attendance \n 6.Change grades \n 7. For the next day");
+        System.out.println("Enter...\n 1.Exit \n 2.See grades \n 3.See tardies \n 4.See classes \n 5.Take attendance \n 6.Change grades \n 7. For the next day \n 8. add a student");
         int input = reader.nextInt();
         switch (input) {
 //Exit
@@ -93,6 +95,9 @@ public class StudentManager {
 //refersh, sets to next day
             case 7:
                 refresh();
+                break;
+            case 8:
+                generateStudents();
                 break;
 //Returns to homepage 
             default:
