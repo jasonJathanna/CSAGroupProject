@@ -6,7 +6,7 @@ public class StudentMain {
 
 		StudentManager sm = new StudentManager();
 		sm.generateStudents();
-		sm.homePage();
+		
 	}
 
 }
