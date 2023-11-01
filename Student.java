@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Student {
-
+//define variables/methods
 
     private boolean hasBeenMarked;
     private ArrayList<Boolean> attendence = new ArrayList<>();
@@ -33,10 +33,6 @@ public class Student {
     public void addClass(int classID){
         classes.add(classID);
     }
-
-
-
-
 
     public boolean isHasBeenMarked() {
         return hasBeenMarked;
