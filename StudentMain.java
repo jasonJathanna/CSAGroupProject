@@ -7,8 +7,7 @@ public class StudentMain {
 		StudentManager sm = new StudentManager();
 // Genrate new students first
 		sm.generateStudents();
-//Call homepage to let user choose actions
-		sm.homePage();
+
 	}
 
 }
