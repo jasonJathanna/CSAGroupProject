@@ -25,7 +25,7 @@ public class StudentManager {
 
 
         } else if (input == 0) {
-
+            homePage();
         } else {
             System.out.println("error invalid input try again ");
             generateStudents();
@@ -51,7 +51,7 @@ public class StudentManager {
 
     public void homePage() {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter \n 1. to exit \n 2. to see grades \n 3. to see tardies \n 4. to see classes \n 5. to take attendance \n 6. to change grades \n 7. for the next day");
+        System.out.println("Enter \n 1. to exit \n 2. to see grades \n 3. to see tardies \n 4. to see classes \n 5. to take attendance \n 6. to change grades \n 7. for the next day \n 8. to add a student");
         int input = reader.nextInt();
         switch (input) {
             case 1:
@@ -78,6 +78,9 @@ public class StudentManager {
                 break;
             case 7:
                 refresh();
+                break;
+            case 8:
+                generateStudents();
                 break;
             default:
                 System.out.println("This is not a valid entry.");
