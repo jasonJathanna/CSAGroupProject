@@ -29,7 +29,6 @@ public class StudentManager {
             generateStudents();
 
         } 
-//ELSE what?
         else if (input == 0) {}
 // if input not valid recall method until valid
         else {
@@ -40,7 +39,7 @@ public class StudentManager {
 
 
     }
-//match indexto id(find correct id)?
+//match index to the inputed student id
     public void setIndex() {
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter the student's ID number");
@@ -107,16 +106,17 @@ public class StudentManager {
 //Exit options
         System.out.println("Enter 0 to go back");
 //calculate percent grade from number grade
-        System.out.println(students.get(index).getGrade() + "%");
+        System.out.println("GPA: "+students.get(index).getGrade() + "%");
         reader.nextInt();
 //Return to homepage
         homePage();
 
     }
-//Change to sting?
+//Change to string so it says present/absent instead of boolean
     public void seeTardies() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 0 to go back");
+//Change array list to string so it says present/absent instead of boolean
         System.out.println(students.get(index).getAttendence().toString());
         sc.nextInt();
 //Return to homepage
@@ -171,10 +171,11 @@ public class StudentManager {
 //Return to homepage
             homePage();
         }
-//CHANGE TO GPA
+//add to student's grade point average
         if (changeGradeInput == 1) {
             System.out.println("Enter student's grade:");
             int newGrade = reader.nextInt();
+//print grade variable
             students.get(index).setGrade(newGrade);
             homePage();
         } else {
@@ -184,15 +185,14 @@ public class StudentManager {
 
     }
 
-
+//Sets to next day for attendance
     public void refresh() {
-
+//changes has been marked to false
         for (Student student : students) {
             if (student.isHasBeenMarked() == false) {
                 student.markPresent();
             }
         }
-
 
         for (Student student : students) {
             student.setHasBeenMarked(false);
