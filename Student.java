@@ -53,11 +53,11 @@ public class Student {
         this.hasBeenMarked = hasBeenMarked;
     }
 
-    public ArrayList<Boolean> getAttendence() {
+    public ArrayList<AttendenceState> getAttendence() {
         return attendence;
     }
 
-    public void setAttendence(ArrayList<Boolean> attendence) {
+    public void setAttendence(ArrayList<AttendenceState> attendence) {
         this.attendence = attendence;
     }
 
