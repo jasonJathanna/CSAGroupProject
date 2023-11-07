@@ -4,7 +4,7 @@ public class Student {
 //define variables/methods
 
     private boolean hasBeenMarked;
-    private ArrayList<Boolean> attendence = new ArrayList<>();
+    private ArrayList<AttendenceState> attendence = new ArrayList<>();
     private ArrayList<Integer> grades = new ArrayList<>();
     private ArrayList<Integer> classes = new ArrayList<>();
     private int id;
@@ -15,7 +15,7 @@ public class Student {
         if(hasBeenMarked){
            System.out.println("Attendece for this students was already compleated"); 
         } else{
-        attendence.add(false);
+        attendence.add(AttendenceState.absent);
         hasBeenMarked = true;
         }
     }
@@ -24,7 +24,7 @@ public class Student {
        if(hasBeenMarked){
            System.out.println("Attendece for this students was already compleated"); 
         } else{
-        attendence.add(true);
+        attendence.add(AttendenceState.present);
         hasBeenMarked = true;
         }
         
