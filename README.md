@@ -144,7 +144,6 @@ Github link
 
 https://github.com/jasonJathanna/CSAGroupProject
 
-Note: the text-edit-branch is the most up to date branch view/use that one and NOT main
 
 
 
