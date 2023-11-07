@@ -1,2 +1,4 @@
 # CSAGroupProject
-//this is the read me file
+
+the branch named text-edit-branch is the most up to date branch 
+use that branch and not main 
