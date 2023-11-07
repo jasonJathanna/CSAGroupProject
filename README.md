@@ -1,2 +1,2 @@
 # CSAGroupProject
-use the text-edit-branch its the most up to date barch. DO NOT USE main.
+use the text-edit-branch its the most up to date branch. DO NOT USE main branch.
